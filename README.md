@@ -6,7 +6,7 @@
 
 The objective of this project is to predict monthly sales volumes for every shop-item pair using historical daily sales data. The dataset features comprehensive metadata—including shops, items, categories for a Russian retail chain. The problem carries high impact in retail operations, enabling better inventory and demand management.
 
-My approach included data cleanup, data integration and time-series matrix creation. Feature engineering strategies included extracting features hidden inside existing features such as city, category type, when the item was first sold, number of transaction in a month, addign lag variables (e.g., past 3 months’ sales), aggregated metrics (e.g., shop/item mean sales) etc. Lag and aggrigation metric will be added in part 2 of the project. My modeling options incuded ARIMA time series model along with ensemble techniques such as XGBoost and LightGBM.
+My approach included data cleanup, data integration and time-series matrix creation. Feature engineering strategies included extracting features hidden inside existing features such as city, category type, when the item was first sold, number of transactions in a month, adding lag variables (e.g., past 3 months’ sales), aggregated metrics (e.g., shop/item mean sales) etc. Lag and aggregation metric will be added in part 2 of the project. My modeling options included ARIMA time series model along with ensemble techniques such as XGBoost and LightGBM.
 
 My findings suggest that strong feature engineering and ensemble modeling are pivotal in delivering accurate forecasts. As future extensions, experimentation with deep learning models and transformers could uncover further improvements and performance.
 
