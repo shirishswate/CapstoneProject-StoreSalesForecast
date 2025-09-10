@@ -74,7 +74,7 @@ Beyond the scope of this project, some deep learning models and transformers can
 
 #### Outline of project
 
-- [Project Notebook](https://github.com/shirishswate/CapstoneProject-StoreSalesForecast)
+- [Project Notebook](https://github.com/shirishswate/CapstoneProject-StoreSalesForecast/blob/main/project.ipynb)
 
 
 
