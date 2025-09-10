@@ -54,18 +54,19 @@ I will be using the sales data for the Russian retail chain provided at kaggle f
 
 #### Results
 
-* There seems to be a over all declining trend in the number of items sold
-* There are couple of months where the sales have gone up and it could related to some promotions or events during those months.
+* There seems to be an overall declining trend in the number of items sold
+* There are couple of months where the sales have gone up and it could relate to some promotions or events during those months.
 * Most of the shops have similar sales overall.
 * Few shops are selling below average
-* couple of shops are are rockstars such as shop-ids 25, 28, 31, 42, and 54
+* Couple of shops are rockstars such as shop-ids 25, 28, 31, 42, and 54
 * Total sale amount by each shop more or less follows the trend of number of items sold, with exception of couple of shops. This indicates these shops tend to sale costlier items.
 * "MockBa" which is Russian for Moscow, seems to be the city where shops are selling the most.
 * All other citys are selling way lower but are close to each other, with couple of cities shining a bit.
-* This indicates, majority of the sell is happening in Big city , Moscow in this case.
+* This indicates, majority of the sell is happening in Big city, Moscow in this case.
 * Four category types are prominent, Игры i.e "Game", Кино i.e "Movies", Музыка i.e "Music" and Подарки i.e "Gifts"
-* Most of the category items are selling in very low range, whith just a handfull outshining.
-* This indicates that a handfull of category item sell significantly more than others.
+* Most of the category items are selling in very low range, with just a handful outshining.
+* This indicates that a handful of category item sell significantly more than others.
+
 #### Next steps
 
 So far I have perofrmed the Data cleaning, initial feature engineering and EDA. As next step, I will be performing part two of Feature engineering, to get the data ready for ensemble models like LGBM and XGBoost. This includes adding mean and lag feature over three months moving period (since the goal is to forecast monthly sales). Then using this engineered data , I will pefrform trainig nand predictions based on these models, and compare the MSE for all the models considered so far to arrive at the best model with least MSE.
