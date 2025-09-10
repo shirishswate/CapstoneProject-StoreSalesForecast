@@ -68,6 +68,9 @@ I will be using the sales data for the Russian retail chain provided at kaggle f
 * This indicates that a handfull of category item sell significantly more than others.
 #### Next steps
 
+So far I have perofrmed the Data cleaning, initial feature engineering and EDA. As next step, I will be performing part two of Feature engineering, to get the data ready for ensemble models like LGBM and XGBoost. This includes adding mean and lag feature over three months moving period (since the goal is to forecast monthly sales). Then using this engineered data , I will pefrform trainig nand predictions based on these models, and compare the MSE for all the models considered so far to arrive at the best model with least MSE.
+
+Beyond the scope of this project, some deep learning models and transformers can be considered to further improve on the accuracy.
 
 #### Outline of project
 
