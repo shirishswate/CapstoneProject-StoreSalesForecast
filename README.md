@@ -13,17 +13,17 @@ My findings suggest that strong feature engineering and ensemble modeling are pi
 #### Rationale
 
 It is important to have predictions for future sales (say a month in advance) for a store as it enables them to decide on resource allocation and inventory planing. A store can optimize their operations and plan for any potential issues there by improving their profitability and competitive edge.
-	◦	It helps with planning in following areas.
-    	▪	Managing inventory so the supply of items can fulfill the demand.
-    	▪	Staffing the stores sufficiently
-    	▪	Budgeting allocation for coming months
-    	▪	Identify areas for growth so the store can focus on it.
-    	▪	Setting sales goals that are achievable.
-    	▪	Assess the effectiveness of marketing campaigns.
-    	▪	Cash flow management and future investment planing by projecting revenue.
-    	▪	Attracting potential investor to secure funding for expansion.
-    	▪	Make proactive measures in case of sales decline.
-    	▪	Under user trends and behavior and manage competition as well as invest to products that users like.
+* It helps with planning in following areas.
+    * Managing inventory so the supply of items can fulfill the demand.
+    * Staffing the stores sufficiently
+    * Budgeting allocation for coming months
+    * Identify areas for growth so the store can focus on it.
+    * Setting sales goals that are achievable.
+    * Assess the effectiveness of marketing campaigns.
+    * Cash flow management and future investment planing by projecting revenue.
+    * Attracting potential investor to secure funding for expansion.
+    * Make proactive measures in case of sales decline.
+    * Under user trends and behavior and manage competition as well as invest to products that users like.
 
 #### Research Question
 
@@ -37,20 +37,20 @@ I will be using the sales data for the Russian retail chain provided at kaggle f
 #### Methodology
 
 * EDA
- * Data cleanup
- * Since the data is for Russian stores, store names and product names are in Russian. I am thinking of using some kind of translation (ay be offline) to get some sense of data patterns visually.
- * Removing unwanted features
- * Discarding nulls, if they do not add any values.
- * Sales data is huge, so might need some memory management  including using smaller datatypes for some features.
- * Merging of Datasets, as there are multiple related data sets
- * Data Visualization
- * Removing outliers and correcting data if required.
- * Feature encoding for Category Type, City etc
- * Split data in to training and testing sets. I will use last one month data as testing set.
- * Perform Time Series analysis using ARIMA model as baseline for each store and item combination.
- * I also plan to use LGBM and XGBRegressor and compare the RMSE of both these models to the ARIMA model and use the best one to forecast the  future sales.
- * In order to use the XGB and LGBM models, I will be adding mean and lag features of various means for cominations of features as part of the feature engineering.
- * Forecast the results.
+    * Data cleanup
+    * Since the data is for Russian stores, store names and product names are in Russian. I am thinking of using some kind of translation (ay be offline) to get some sense of data patterns visually.
+    * Removing unwanted features
+    * Discarding nulls, if they do not add any values.
+    * Sales data is huge, so might need some memory management  including using smaller datatypes for some features.
+    * Merging of Datasets, as there are multiple related data set.
+    * Data Visualization
+    * Removing outliers and correcting data if required.
+    * Feature encoding for Category Type, City etc
+    * Split data in to training and testing sets. I will use last one month data as testing set.
+    * Perform Time Series analysis using ARIMA model as baseline for each store and item combination.
+    * I also plan to use LGBM and XGBRegressor and compare the RMSE of both these models to the ARIMA model and use the best one to forecast the  future sales.
+    * In order to use the XGB and LGBM models, I will be adding mean and lag features of various means for cominations of features as part of the feature engineering.
+    * Forecast the results.
 
 #### Results
 
