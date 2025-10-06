@@ -23,7 +23,7 @@ It is important to have predictions for future sales (say a month in advance) fo
     * Cash flow management and future investment planing by projecting revenue.
     * Attracting potential investor to secure funding for expansion.
     * Make proactive measures in case of sales decline.
-    * Under user trends and behavior and manage competition as well as invest to products that users like.
+    * Understand user trends and behavior and manage competition as well as invest to products that users like.
 
 #### Research Question
 
