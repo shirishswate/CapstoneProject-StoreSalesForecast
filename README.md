@@ -76,7 +76,9 @@ There are five data files available.
 
 ##### Observations 
 
-* There seems to be a over all declining trend in the number of items sold
+* There seems to be a over all declining trend in the number of items sold.
+![Monthly Item Sale](images/bar_monthly_items_sold.png) 
+  
 * There are couple of months where the sales have gone up and it could related to some promotions or events during those months.
 * Most of the shops have similar sales overall.
 * Few shops are selling below average
