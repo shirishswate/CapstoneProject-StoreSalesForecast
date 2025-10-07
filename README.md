@@ -108,16 +108,27 @@ After training 4 different models via GridSerch cross-validation, the best estim
 | Model Name | RMSE | 
 |---|---|
 | ARIMA | 0.705 |
-| LGBM | 4.468 |
-| XGB | 12.481 |
+| LGBM | 0.679 |
+| XGB | 0.687 |
 | Plynomial | 13.81 |
 
 ![RMSE Comparison](images/RMSE_Comparison.png) 
 
-* Even though ARIMA model’s error score is the least, the time taken for execution is extremely high, compared to LGBM.
-* LGBM model’s error score is relatively low so is execution time.
-* Recommended model is LGBM.
- 
+* ARIMA, LGBM and XGB, all have similar validation error scores.
+* LGBM model’s error score is the least.
+* Execution time for both XGB and LGBM are similar.
+* Recommended model is LGBM
+
+  Here are the plots for training, validation and test set data along with model predictions.
+  
+  | Polynomial            				 | ARIMA              				| 
+  | ------------------------------------ | -------------------------------- | 
+  | ![Polynomial](images/ploy_preds.png) | ![ARIMA](images/ARIMA_preds.png) |
+
+  | XGB					   	     | LGBM						     |
+  | ---------------------------- | ----------------------------- |
+  | ![XGB](images/XGB_preds.png) | ![LGBM](images/XGB_preds.png) |
+  
 #### Next steps
 
 As part of this project I have trained 4 models and compared them to chsse the one that has least error rate on validation data set.  As next steps, some deep learning models and transformers can be considered to further improve on the accuracy. Specially, the Long-short term memory RNN can be trained. Since Neural networks work best against overfittign to training data, and LSTM is one of the ideal models for time-series forecasting. 
