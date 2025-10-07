@@ -128,7 +128,7 @@ After training 4 different models via GridSerch cross-validation, the best estim
 
   | XGB					   	     | LGBM						     |
   | ---------------------------- | ----------------------------- |
-  | ![XGB](images/XGB_preds.png) | ![LGBM](images/XGB_preds.png) |
+  | ![XGB](images/XGB_preds.png) | ![LGBM](images/LGBM_preds.pn) |
   
 #### Next steps
 
