@@ -76,18 +76,30 @@ There are five data files available.
 
 ##### Observations 
 
-* There seems to be a over all declining trend in the number of items sold.
 ![Monthly Item Sale](images/bar_monthly_items_sold.png) 
-  
+
+* There seems to be a over all declining trend in the number of items sold.
 * There are couple of months where the sales have gone up and it could related to some promotions or events during those months.
+
+![Shop wise items sale](images/bar_shop_items_sold.png) 
+
 * Most of the shops have similar sales overall.
 * Few shops are selling below average
 * couple of shops are are rockstars such as shop-ids 25, 28, 31, 42, and 54
 * Total sale amount by each shop more or less follows the trend of number of items sold, with exception of couple of shops. This indicates these shops tend to sale costlier items.
+
+![City wise items sale](images/bar_city_shop_item_sold.png) 
+
 * "MockBa" which is Russian for Moscow, seems to be the city where shops are selling the most items.
 * All other cities are selling way lower but are close to each other, with couple of cities shining a bit.
 * This indicates, majority of the sale is happening in Big city , Moscow in this case.
+
+![City wise items sale](images/bar_category_type_item_sold.png)   
+
 * Four category types are prominent, Игры i.e "Game", Кино i.e "Movies", Музыка i.e "Music" and Подарки i.e "Gifts"
+
+![City wise items sale](images/bar_category_item_sold.png) 
+
 * Most of the category items are selling in very low range, whith just a handfull outshining.
 * This indicates that a handfull of category item sell significantly more than others.
 
