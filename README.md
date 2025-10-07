@@ -84,21 +84,31 @@ There are five data files available.
 * Few shops are selling below average
 * couple of shops are are rockstars such as shop-ids 25, 28, 31, 42, and 54
 * Total sale amount by each shop more or less follows the trend of number of items sold, with exception of couple of shops. This indicates these shops tend to sale costlier items.
-* "MockBa" which is Russian for Moscow, seems to be the city where shops are selling the most.
-* All other citys are selling way lower but are close to each other, with couple of cities shining a bit.
-* This indicates, majority of the sell is happening in Big city , Moscow in this case.
+* "MockBa" which is Russian for Moscow, seems to be the city where shops are selling the most items.
+* All other cities are selling way lower but are close to each other, with couple of cities shining a bit.
+* This indicates, majority of the sale is happening in Big city , Moscow in this case.
 * Four category types are prominent, Игры i.e "Game", Кино i.e "Movies", Музыка i.e "Music" and Подарки i.e "Gifts"
 * Most of the category items are selling in very low range, whith just a handfull outshining.
 * This indicates that a handfull of category item sell significantly more than others.
 
 #### Results
+After training 4 different models via GridSerch cross-validation, the best estimators in each case are identified. RMSE values for each model is as per the below table.
+| Model Name | RMSE | 
+|---|---|
+| ARIMA | 0.705 |
+| LGBM | 4.468 |
+| XGB | 12.481 |
+| Plynomial | 13.81 |
 
+![RMSE Comparison](images/RMSE_Comparison.png) 
 
+* Even though ARIMA model’s error score is the least, the time taken for execution is extremely high, compared to LGBM.
+* LGBM model’s error score is relatively low so is execution time.
+* Recommended model is LGBM.
+ 
 #### Next steps
 
-So far I have perofrmed the Data cleaning, initial feature engineering and EDA. As next step, I will be performing part two of Feature engineering, to get the data ready for ensemble models like LGBM and XGBoost. This includes adding mean and lag feature over three months moving period (since the goal is to forecast monthly sales). Then using this engineered data , I will pefrform trainig nand predictions based on these models, and compare the MSE for all the models considered so far to arrive at the best model with least MSE.
-
-Beyond the scope of this project, some deep learning models and transformers can be considered to further improve on the accuracy.
+As part of this project I have trained 4 models and compared them to chsse the one that has least error rate on validation data set.  As next steps, some deep learning models and transformers can be considered to further improve on the accuracy. Specially, the Long-short term memory RNN can be trained. Since Neural networks work best against overfittign to training data, and LSTM is one of the ideal models for time-series forecasting. 
 
 #### Outline of project
 
