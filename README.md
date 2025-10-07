@@ -12,7 +12,7 @@ My findings suggest that strong feature engineering and ensemble modeling are pi
 
 #### Business Understanding
 
-It is important to have predictions for future sales (say a month in advance) for a store as it enables them to decide on resource allocation and inventory planing. A store can optimize their operations and plan for any potential issues there by improving their profitability and competitive edge.
+It is important to have predictions for future sales (say a month in advance) for a store as it enables them to decide on resource allocation and inventory planning. A store can optimize their operations and plan for any potential issues there by improving their profitability and competitive edge.
 * It helps with planning in following areas.
     * Managing inventory so the supply of items can fulfill the demand.
     * Staffing the stores sufficiently
@@ -20,7 +20,7 @@ It is important to have predictions for future sales (say a month in advance) fo
     * Identify areas for growth so the store can focus on it.
     * Setting sales goals that are achievable.
     * Assess the effectiveness of marketing campaigns.
-    * Cash flow management and future investment planing by projecting revenue.
+    * Cash flow management and future investment planning by projecting revenue.
     * Attracting potential investor to secure funding for expansion.
     * Make proactive measures in case of sales decline.
     * Understand user trends and behavior and manage competition as well as invest to products that users like.
@@ -31,7 +31,7 @@ what will be the total sale for every product in every store location of a retai
 
 #### Data Sources
 
-A large Russian retail chain operating across about 60 stores provided provided daily sales data for a duration of 33 months from Jan 2013 till oct 2015.
+A large Russian retail chain operating across about 60 stores, provided daily sales data for a duration of 33 months from Jan 2013 till oct 2015.
 [Sales Data](https://www.kaggle.com/competitions/competitive-data-science-predict-future-sales/data)
 
 #### Directory Structure
@@ -39,7 +39,7 @@ A large Russian retail chain operating across about 60 stores provided provided 
 The Github repository contains following folders
 * data - Contains all the data files including test and training data files.
 * images - Contains all the charts and graphs generated during EDA and model training and inferencing.
-* presentation - Contains the powerpoint presentation for the Sales forecasting project.
+* presentation - Contains the power point presentation for the Sales forecasting project.
 
 Main folder (project root) contains following files
 * README.md - Readme file with project details.
@@ -49,7 +49,7 @@ Main folder (project root) contains following files
 #### Methodology
 
 * EDA
-   *	Since the data is for Russian stores, store names and product names are in Russian. I used a translation tool to get some sense of data patterns visually.
+    *	Since the data is for Russian stores, store names and product names are in Russian. I used a translation tool to get some sense of data patterns visually.
 	*	Removed unwanted features
 	*	Discarded nulls, if they do not add any values.
 	*	Deleted duplicate records.
@@ -57,35 +57,35 @@ Main folder (project root) contains following files
 	*	Merged Datasets, as there are multiple related data sets
 	*	Visualizalized data using charts. This gives some sense of data patterns visually.
 	*	Removed outliers and corrected data.
-	*	Encoded Category Type and City  features.
+	*	Encoded Category Type and City features.
 	*	Split data in to training, validation and testing sets. I used last one month data as testing set and month 32 and33 for validation set.
 	*	As a baseline model, used Polynomial Regression and performed GridSearchCV to find the best degree.
-	*	Perform Time Series analysis using ARIMA model for each store and item combination. First iteration took a long ime, when i was aggregating monthly alecount for each store-item combination. Then I changed the logic to aggregate the monthly counts for the whole dataset and then looped through each store-item combinaiton. This made the training process drastically faster. 
+	*	Perform Time Series analysis using ARIMA model for each store and item combination. First iteration took a long time, when I was aggregating monthly sale count for each store-item combination. Then I changed the logic to aggregate the monthly counts for the whole dataset and then looped through each store-item combination. This made the training process drastically faster. 
     *   I also used LGBM and XGBRegressor and compare the RMSE of both these models to the Polynomial and ARIMA model.  
-    *   I added mean and lag features of various cominations of features as part of the feature engineering, along with the mean and standard deviations of the lag features and the change in the lag features. This was done to capture trend and momentum of the trend for the monthly sales counts.
+    *   I added mean and lag features of various combinations of features as part of the feature engineering, along with the mean and standard deviations of the lag features and the change in the lag features. This was done to capture trend and momentum of the trend for the monthly sales counts.
 
 #### Data Understanding
 
 ##### Data Summary
 There are five data files available.
-* Shops.csv - This file contains detals for each shop , such as shop_id, shop_name. There are 59 stores for the retail chain.
+* Shops.csv - This file contains details for each shop, such as shop_id, shop_name. There are 59 stores for the retail chain.
 * item_categories.csv - This file contains details about the item categories such as item_category_id, item_category_name. There are 83 categorys available.
 * items.csv - This file contains details of each item that is available for sale at the stores such as item_name, item_category_id and item_id. There are around 22K items available for sale across all the 59 stores.
-* sales_train.csv - This file contain the data available for training. It has information such as daily sales counts for each item in each store and their price.
-* test.csv - this file only contains store_id and item_id and is suppose to be used for testing forecasting the sale for next month for each  store-item combination in the file.
+* sales_train.csv - This file contains the data available for training. It has information such as daily sales counts for each item in each store and their price.
+* test.csv - this file only contains store_id and item_id and is supposed to be used for testing forecasting the sale for next month for each  store-item combination in the file.
 
 ##### Observations 
 
 ![Monthly Item Sale](images/bar_monthly_items_sold.png) 
 
-* There seems to be a over all declining trend in the number of items sold.
+* There seems to be a over-all declining trend in the number of items sold.
 * There are couple of months where the sales have gone up and it could related to some promotions or events during those months.
 
 ![Shop wise items sale](images/bar_shop_items_sold.png) 
 
 * Most of the shops have similar sales overall.
 * Few shops are selling below average
-* couple of shops are are rockstars such as shop-ids 25, 28, 31, 42, and 54
+* Couple of shops are rockstars such as shop-ids 25, 28, 31, 42, and 54
 * Total sale amount by each shop more or less follows the trend of number of items sold, with exception of couple of shops. This indicates these shops tend to sale costlier items.
 
 ![City wise items sale](images/bar_city_shop_item_sold.png) 
@@ -100,11 +100,12 @@ There are five data files available.
 
 ![City wise items sale](images/bar_category_item_sold.png) 
 
-* Most of the category items are selling in very low range, whith just a handfull outshining.
-* This indicates that a handfull of category item sell significantly more than others.
+* Most of the category items are selling in very low range, with just a handful outshining.
+* This indicates that a handful of category item sell significantly more than others.
 
 #### Results
 After training 4 different models via GridSerch cross-validation, the best estimators in each case are identified. RMSE values for each model is as per the below table.
+
 | Model Name | RMSE | 
 |---|---|
 | ARIMA | 0.705 |
@@ -119,7 +120,7 @@ After training 4 different models via GridSerch cross-validation, the best estim
 * Execution time for both XGB and LGBM are similar.
 * Recommended model is LGBM
 
-  Here are the plots for training, validation and test set data along with model predictions.
+  Following plots compair training, validation and test datasets along with model predictions.
   
   | Polynomial            				 | ARIMA              				| 
   | ------------------------------------ | -------------------------------- | 
@@ -131,7 +132,7 @@ After training 4 different models via GridSerch cross-validation, the best estim
   
 #### Next steps
 
-As part of this project I have trained 4 models and compared them to chsse the one that has least error rate on validation data set.  As next steps, some deep learning models and transformers can be considered to further improve on the accuracy. Specially, the Long-short term memory RNN can be trained. Since Neural networks work best against overfittign to training data, and LSTM is one of the ideal models for time-series forecasting. 
+As part of this project, I have trained 4 models and compared them to choose the one that has least error rate on validation data set.  As next steps, some deep learning models and transformers can be considered to further improve on the accuracy. Specially, the Long-short term memory RNN can be trained. Since Neural networks work best against overfitting to training data, and LSTM is one of the ideal models for time-series forecasting. 
 
 #### Outline of project
 
