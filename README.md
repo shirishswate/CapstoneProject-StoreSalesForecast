@@ -1,5 +1,4 @@
-## Project Title
-### Forecast Future Sales
+## Forecast Future Sales
 **Author**: Shirish Wate
 
 #### Executive summary
