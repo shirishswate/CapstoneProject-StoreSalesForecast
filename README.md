@@ -1,4 +1,4 @@
-<img width="579" height="153" alt="image" src="https://github.com/user-attachments/assets/f5f18cc6-c02d-4309-92dd-64be8e9c6cb3" />## Project Title
+## Project Title
 ### Forecast Future Sales
 **Author**: Shirish Wate
 
