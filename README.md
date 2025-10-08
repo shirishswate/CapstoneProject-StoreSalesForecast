@@ -43,7 +43,7 @@ The Github repository contains following folders
 Main folder (project root) contains following files
 * README.md - Readme file with project details.
 * Summary.docx - Word document version of the project summary
-* capstone-project.ipynb - Main Jupyter notebook for the project.
+* sales-forecast-capstone-project.ipynb - Main Jupyter notebook for the project.
   
 #### Methodology
 
@@ -136,7 +136,7 @@ As part of this project, I have trained 4 models and compared them to choose the
 
 #### Outline of project
 
-- [Project Notebook](https://github.com/shirishswate/CapstoneProject-StoreSalesForecast/blob/main/project.ipynb)
+- [Project Notebook](https://github.com/shirishswate/CapstoneProject-StoreSalesForecast/blob/main/sales-forecast-capstone-project.ipynb)
 
 
 
